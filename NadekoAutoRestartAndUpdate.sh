@@ -14,11 +14,11 @@ while [ $choice -eq 4 ]; do
 read choice
 if [ $choice -eq 1 ] ; then
 	echo ""
-	wget -N https://github.com/Kwoth/NadekoBot-BashScript/raw/1.9/NadekoARN.sh && bash "$root/NadekoARN.sh"
+	wget -N https://github.com/ArhangelAgrail/Bash-Script/raw/master/NadekoARN.sh && bash "$root/NadekoARN.sh"
 else
 	if [ $choice -eq 2 ] ; then
 		echo ""
-		wget -N https://github.com/Kwoth/NadekoBot-BashScript/raw/1.9/NadekoARU_Latest.sh && bash "$root/NadekoARU_Latest.sh"
+		wget -N https://github.com/ArhangelAgrail/Bash-Script/raw/master/NadekoARU_Latest.sh && bash "$root/NadekoARU_Latest.sh"
 	else
 			if [ $choice -eq 3 ] ; then
 				echo ""

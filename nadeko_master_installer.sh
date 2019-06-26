@@ -26,7 +26,7 @@ else
 		if [ $choice -eq 2 ] ; then
 			echo ""
 			echo "Running Nadeko Normally, if you are running this to check Nadeko, use .die command on discord to stop Nadeko."
-			wget -N https://github.com/ArhangelAgrail/Bash-Script/raw/master/nadeko_run.sh.sh && bash "$root/nadeko_run.sh"
+			wget -N https://github.com/ArhangelAgrail/Bash-Script/raw/master/nadeko_run.sh && bash "$root/nadeko_run.sh"
 			echo ""
 			echo "Welcome back to NadekoBot."
 			sleep 2s

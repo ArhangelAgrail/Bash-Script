@@ -50,6 +50,7 @@ echo ""
 echo "Building done. Moving Nadeko"
 
 cd ".."
+cd ".."
 
 if [ ! -d NadekoBot ]
 then

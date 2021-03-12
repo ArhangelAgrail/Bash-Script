@@ -38,7 +38,7 @@ echo "NadekoBot downloaded."
 
 echo ""
 echo "Downloading Nadeko dependencies"
-cd "$root/$tempdir/NadekoBot"
+cd "$root/EspritBot/$tempdir/NadekoBot"
 dotnet restore
 echo ""
 echo "Download done"
@@ -49,7 +49,7 @@ dotnet build --configuration Release
 echo ""
 echo "Building done. Moving Nadeko"
 
-cd "$root"
+cd "$root/EspritBot"
 
 if [ ! -d NadekoBot ]
 then
@@ -58,19 +58,19 @@ else
     rm -rf NadekoBot_old 1>/dev/null 2>&1
     mv -fT NadekoBot NadekoBot_old 1>/dev/null 2>&1
     mv "$tempdir"/NadekoBot NadekoBot
-    cp -f "$root/NadekoBot_old/src/NadekoBot/credentials.json" "$root/NadekoBot/src/NadekoBot/credentials.json" 1>/dev/null 2>&1
+    cp -f "$root/EspritBot/NadekoBot_old/src/NadekoBot/credentials.json" "$root/EspritBot/NadekoBot/src/NadekoBot/credentials.json" 1>/dev/null 2>&1
     echo ""
     echo "credentials.json copied to the new version"
-    cp -RT "$root/NadekoBot_old/src/NadekoBot/bin/" "$root/NadekoBot/src/NadekoBot/bin/" 1>/dev/null 2>&1
-    cp -RT "$root/NadekoBot/src/NadekoBot/bin/Release/netcoreapp1.0/data/NadekoBot.db" "$root/NadekoBot/src/NadekoBot/bin/Release/netcoreapp2.1/data/NadekoBot.db" 1>/dev/null 2>&1
-	cp -RT "$root/NadekoBot/src/NadekoBot/bin/Release/netcoreapp1.1/data/NadekoBot.db" "$root/NadekoBot/src/NadekoBot/bin/Release/netcoreapp2.1/data/NadekoBot.db" 1>/dev/null 2>&1
-    cp -RT "$root/NadekoBot/src/NadekoBot/bin/Release/netcoreapp2.0/data/NadekoBot.db" "$root/NadekoBot/src/NadekoBot/bin/Release/netcoreapp2.1/data/NadekoBot.db" 1>/dev/null 2>&1
-    mv -f "$root/NadekoBot/src/NadekoBot/bin/Release/netcoreapp1.0/data/NadekoBot.db" "$root/NadekoBot/src/NadekoBot/bin/Release/netcoreapp1.0/data/NadekoBot_old.db" 1>/dev/null 2>&1
-	mv -f "$root/NadekoBot/src/NadekoBot/bin/Release/netcoreapp1.1/data/NadekoBot.db" "$root/NadekoBot/src/NadekoBot/bin/Release/netcoreapp1.1/data/NadekoBot_old.db" 1>/dev/null 2>&1
-    mv -f "$root/NadekoBot/src/NadekoBot/bin/Release/netcoreapp2.0/data/NadekoBot.db" "$root/NadekoBot/src/NadekoBot/bin/Release/netcoreapp2.0/data/NadekoBot_old.db" 1>/dev/null 2>&1
+    cp -RT "$root/EspritBot/NadekoBot_old/src/NadekoBot/bin/" "$root/EspritBot/NadekoBot/src/NadekoBot/bin/" 1>/dev/null 2>&1
+    cp -RT "$root/EspritBot/NadekoBot/src/NadekoBot/bin/Release/netcoreapp1.0/data/NadekoBot.db" "$root/EspritBot/NadekoBot/src/NadekoBot/bin/Release/netcoreapp2.1/data/NadekoBot.db" 1>/dev/null 2>&1
+	cp -RT "$root/EspritBot/NadekoBot/src/NadekoBot/bin/Release/netcoreapp1.1/data/NadekoBot.db" "$root/NadekoBot/src/NadekoBot/bin/Release/netcoreapp2.1/data/NadekoBot.db" 1>/dev/null 2>&1
+    cp -RT "$root/EspritBot/NadekoBot/src/NadekoBot/bin/Release/netcoreapp2.0/data/NadekoBot.db" "$root/EspritBot/NadekoBot/src/NadekoBot/bin/Release/netcoreapp2.1/data/NadekoBot.db" 1>/dev/null 2>&1
+    mv -f "$root/EspritBot/NadekoBot/src/NadekoBot/bin/Release/netcoreapp1.0/data/NadekoBot.db" "$root/EspritBot/NadekoBot/src/NadekoBot/bin/Release/netcoreapp1.0/data/NadekoBot_old.db" 1>/dev/null 2>&1
+	mv -f "$root/EspritBot/NadekoBot/src/NadekoBot/bin/Release/netcoreapp1.1/data/NadekoBot.db" "$root/EspritBot/NadekoBot/src/NadekoBot/bin/Release/netcoreapp1.1/data/NadekoBot_old.db" 1>/dev/null 2>&1
+    mv -f "$root/EspritBot/NadekoBot/src/NadekoBot/bin/Release/netcoreapp2.0/data/NadekoBot.db" "$root/EspritBot/NadekoBot/src/NadekoBot/bin/Release/netcoreapp2.0/data/NadekoBot_old.db" 1>/dev/null 2>&1
     echo ""
     echo "Database copied to the new version"
-    cp -RT "$root/NadekoBot_old/src/NadekoBot/data/" "$root/NadekoBot/src/NadekoBot/data/" 1>/dev/null 2>&1
+    cp -RT "$root/EspritBot/NadekoBot_old/src/NadekoBot/data/" "$root/EspritBot/NadekoBot/src/NadekoBot/data/" 1>/dev/null 2>&1
     echo ""
     echo "Other data copied to the new version"
 fi
@@ -79,6 +79,6 @@ rm -r "$tempdir"
 echo ""
 echo "Installation Complete."
 
-cd "$root"
-rm "$root/nadeko_installer_latest.sh"
+cd "$root/EspritBot"
+rm "$root/EspritBot/nadeko_installer_latest.sh"
 exit 0

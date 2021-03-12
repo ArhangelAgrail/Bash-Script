@@ -32,13 +32,13 @@ cd "$tempdir"
 
 echo ""
 echo "Downloading NadekoBot, please wait."
-git clone -b master --recursive --depth 1 https://github.com/ArhangelAgrail/LakeBot
+git clone -b master --recursive --depth 1 https://github.com/ArhangelAgrail/NadekoBot
 echo ""
 echo "NadekoBot downloaded."
 
 echo ""
 echo "Downloading Nadeko dependencies"
-cd "$root/$tempdir/LakeBot"
+cd "$root/$tempdir/NadekoBot"
 dotnet restore
 echo ""
 echo "Download done"
@@ -53,11 +53,11 @@ cd "$root"
 
 if [ ! -d NadekoBot ]
 then
-    mv "$tempdir"/LakeBot NadekoBot
+    mv "$tempdir"/NadekoBot NadekoBot
 else
     rm -rf NadekoBot_old 1>/dev/null 2>&1
     mv -fT NadekoBot NadekoBot_old 1>/dev/null 2>&1
-    mv "$tempdir"/LakeBot NadekoBot
+    mv "$tempdir"/NadekoBot NadekoBot
     cp -f "$root/NadekoBot_old/src/NadekoBot/credentials.json" "$root/NadekoBot/src/NadekoBot/credentials.json" 1>/dev/null 2>&1
     echo ""
     echo "credentials.json copied to the new version"

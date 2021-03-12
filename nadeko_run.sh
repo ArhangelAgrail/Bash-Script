@@ -20,6 +20,6 @@ echo "Running NadekoBot. Please wait."
 dotnet run -c Release
 echo "Done"
 
-cd "$root"
-rm "$root/nadeko_run.sh"
+cd "$root/EspritBot"
+rm "$root/EspritBot/nadeko_run.sh"
 exit 0

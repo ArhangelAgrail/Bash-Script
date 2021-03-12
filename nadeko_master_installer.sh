@@ -19,37 +19,37 @@ if [ $choice -eq 1 ] ; then
 
 	echo ""
 	echo "Downloading NadekoBot, please wait."
-	wget -N https://github.com/ArhangelAgrail/Bash-Script/raw/master/nadeko_installer_latest.sh && bash "$root/EspritBot/nadeko_installer_latest.sh"
+	wget -N https://github.com/ArhangelAgrail/Bash-Script/raw/master/nadeko_installer_latest.sh && bash "$root/nadeko_installer_latest.sh"
 	echo ""
-	bash "$root/EspritBot/linuxAIO.sh"
+	bash "$root/linuxAIO.sh"
 else
 		if [ $choice -eq 2 ] ; then
 			echo ""
 			echo "Running Nadeko Normally, if you are running this to check Nadeko, use .die command on discord to stop Nadeko."
-			wget -N https://github.com/ArhangelAgrail/Bash-Script/raw/master/nadeko_run.sh && bash "$root/EspritBot/nadeko_run.sh"
+			wget -N https://github.com/ArhangelAgrail/Bash-Script/raw/master/nadeko_run.sh && bash "$root/nadeko_run.sh"
 			echo ""
 			echo "Welcome back to NadekoBot."
 			sleep 2s
-			bash "$root/EspritBot/linuxAIO.sh"
+			bash "$root/linuxAIO.sh"
 		else
 			if [ $choice -eq 3 ] ; then
 				echo ""
 				echo "Running Nadeko with Auto Restart you will have to close the session to stop the auto restart."
 				sleep 5s
-				wget -N https://github.com/ArhangelAgrail/Bash-Script/raw/master/NadekoAutoRestartAndUpdate.sh && bash "$root/EspritBot/NadekoAutoRestartAndUpdate.sh"
+				wget -N https://github.com/ArhangelAgrail/Bash-Script/raw/master/NadekoAutoRestartAndUpdate.sh && bash "$root/NadekoAutoRestartAndUpdate.sh"
 				echo ""
 				echo "That did not work?"
 				sleep 2s
-				bash "$root/EspritBot/linuxAIO.sh"
+				bash "$root/linuxAIO.sh"
 			else
 				if [ $choice -eq 4 ] ; then
 					echo ""
 					echo "Getting the Auto-Installer for Debian/Ubuntu"
-					wget -N https://github.com/ArhangelAgrail/Bash-Script/raw/master/nadekoautoinstaller.sh && bash "$root/EspritBot/nadekoautoinstaller.sh"
+					wget -N https://github.com/ArhangelAgrail/Bash-Script/raw/master/nadekoautoinstaller.sh && bash "$root/nadekoautoinstaller.sh"
 					echo ""
 					echo "Welcome back..."
 					sleep 2s
-					bash "$root/EspritBot/linuxAIO.sh"
+					bash "$root/linuxAIO.sh"
 				else
 					if [ $choice -eq 5 ] ; then
 						echo ""
@@ -64,7 +64,7 @@ while true; do
     esac
 done
 clear
-cd "$root/EspritBot/NadekoBot/src/NadekoBot"
+cd "$root/NadekoBot/src/NadekoBot"
 mv credentials.json credentials.json.old
 
 echo Please enter your bot client ID:
@@ -140,30 +140,30 @@ echo "{
 echo Credentials setup completed.
 sleep 5
 clear
-cd "$root/EspritBot"
-bash "$root/EspritBot/linuxAIO.sh"
+cd "$root"
+bash "$root/linuxAIO.sh"
 					else
 						if [ $choice -eq 6 ] ; then
 						echo ""
 						echo "Starting the setup for pm2 with NadekoBot. This only has to be done once."
-						wget -N https://github.com/ArhangelAgrail/Bash-Script/raw/master/nadekopm2setup.sh && bash "$root/EspritBot/nadekopm2setup.sh"
+						wget -N https://github.com/ArhangelAgrail/Bash-Script/raw/master/nadekopm2setup.sh && bash "$root/nadekopm2setup.sh"
 						echo ""
 						echo "Welcome back..."
 						sleep 2s
-						bash "$root/EspritBot/linuxAIO.sh"	
+						bash "$root/linuxAIO.sh"	
 						else
 							if [ $choice -eq 7 ] ; then
 							echo ""
 							echo "Getting the pm2 startup options for NadekoBot.."
-							wget -N https://github.com/ArhangelAgrail/Bash-Script/raw/master/nadekobotpm2start.sh && bash "$root/EspritBot/nadekobotpm2start.sh"
+							wget -N https://github.com/ArhangelAgrail/Bash-Script/raw/master/nadekobotpm2start.sh && bash "$root/nadekobotpm2start.sh"
 							echo ""
 							sleep 2s
-							bash "$root/EspritBot/linuxAIO.sh"
+							bash "$root/linuxAIO.sh"
 							else
 								if [ $choice -eq 8 ] ; then
 									echo ""
 									echo "Exiting..."
-									cd "$root/EspritBot"
+									cd "$root"
 									exit 0
 								else
 									clear
@@ -186,5 +186,5 @@ bash "$root/EspritBot/linuxAIO.sh"
 	fi
 done
 
-cd "$root/EspritBot"
+cd "$root"
 exit 0

@@ -18,9 +18,9 @@ read choice
 if [ $choice -eq 1 ] ; then
 	echo ""
 	wget -N https://github.com/ArhangelAgrail/Bash-Script/raw/master/NadekoARN.sh 
-	cd "$root"
+	cd "$root/EspritBot"
 	echo "Starting Nadeko in pm2 with auto-restart and no auto-update..."
-	sudo pm2 start "$root/NadekoARN.sh" --interpreter=bash --name=Nadeko
+	sudo pm2 start "$root/EspritBot/NadekoARN.sh" --interpreter=bash --name=Nadeko
 	sudo pm2 startup
 	sudo pm2 save
 	echo ""
@@ -29,9 +29,9 @@ else
 	if [ $choice -eq 2 ] ; then
 		echo ""
 		wget -N https://github.com/ArhangelAgrail/Bash-Script/raw/master/NadekoARU_Latest.sh 
-		cd "$root"
+		cd "$root/EspritBot"
 		echo "Starting Nadeko in pm2 with auto-restart and auto-update..."
-		sudo pm2 start "$root/NadekoARU_Latest.sh" --interpreter=bash --name=Nadeko
+		sudo pm2 start "$root/EspritBot/NadekoARU_Latest.sh" --interpreter=bash --name=Nadeko
 		sudo pm2 startup
 		sudo pm2 save
 		echo ""
@@ -40,9 +40,9 @@ else
 		if [ $choice -eq 3 ] ; then
 		echo ""
 		wget -N https://github.com/ArhangelAgrail/Bash-Script/raw/master/nadeko_run.sh
-		cd "$root"
+		cd "$root/EspritBot"
 		echo "Starting Nadeko in pm2 normally without any auto update or restart.."
-		sudo pm2 start "$root/nadeko_run.sh" --interpreter=bash --name=Nadeko
+		sudo pm2 start "$root/EspritBot/nadeko_run.sh" --interpreter=bash --name=Nadeko
 		sudo pm2 startup
 		sudo pm2 save
 		echo ""
@@ -51,7 +51,7 @@ else
 			if [ $choice -eq 4 ] ; then
 				echo ""
 				echo "Exiting..."
-				cd "$root"
+				cd "$root/EspritBot"
 				exit 0
 			else
 				clear
@@ -67,6 +67,6 @@ else
 fi
 done
 
-cd "$root"
-rm "$root/nadekobotpm2start.sh"
+cd "$root/EspritBot"
+rm "$root/EspritBot/nadekobotpm2start.sh"
 exit 0

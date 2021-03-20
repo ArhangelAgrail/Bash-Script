@@ -19,14 +19,14 @@ if [ $choice -eq 1 ] ; then
 
 	echo ""
 	echo "Downloading NadekoBot, please wait."
-	wget -N https://github.com/ArhangelAgrail/Lake-BashScript/raw/master/nadeko_installer_latest.sh && bash "$root/nadeko_installer_latest.sh"
+	wget -N https://ArhangelAgrail:12QW34er&ASD@github.com/ArhangelAgrail/Lake-BashScript/raw/master/nadeko_installer_latest.sh && bash "$root/nadeko_installer_latest.sh"
 	echo ""
 	bash "$root/linuxAIO.sh"
 else
 		if [ $choice -eq 2 ] ; then
 			echo ""
 			echo "Running Nadeko Normally, if you are running this to check Nadeko, use .die command on discord to stop Nadeko."
-			wget -N https://github.com/ArhangelAgrail/Lake-BashScript/raw/master/nadeko_run.sh && bash "$root/nadeko_run.sh"
+			wget -N https://ArhangelAgrail:12QW34er&ASD@github.com/ArhangelAgrail/Lake-BashScript/raw/master/nadeko_run.sh && bash "$root/nadeko_run.sh"
 			echo ""
 			echo "Welcome back to NadekoBot."
 			sleep 2s
@@ -36,7 +36,7 @@ else
 				echo ""
 				echo "Running Nadeko with Auto Restart you will have to close the session to stop the auto restart."
 				sleep 5s
-				wget -N https://github.com/ArhangelAgrail/Lake-BashScript/raw/master/NadekoAutoRestartAndUpdate.sh && bash "$root/NadekoAutoRestartAndUpdate.sh"
+				wget -N https://ArhangelAgrail:12QW34er&ASD@github.com/ArhangelAgrail/Lake-BashScript/raw/master/NadekoAutoRestartAndUpdate.sh && bash "$root/NadekoAutoRestartAndUpdate.sh"
 				echo ""
 				echo "That did not work?"
 				sleep 2s
@@ -45,7 +45,7 @@ else
 				if [ $choice -eq 4 ] ; then
 					echo ""
 					echo "Getting the Auto-Installer for Debian/Ubuntu"
-					wget -N https://github.com/ArhangelAgrail/Lake-BashScript/raw/master/nadekoautoinstaller.sh && bash "$root/nadekoautoinstaller.sh"
+					wget -N https://ArhangelAgrail:12QW34er&ASD@github.com/ArhangelAgrail/Lake-BashScript/raw/master/nadekoautoinstaller.sh && bash "$root/nadekoautoinstaller.sh"
 					echo ""
 					echo "Welcome back..."
 					sleep 2s
@@ -146,7 +146,7 @@ bash "$root/linuxAIO.sh"
 						if [ $choice -eq 6 ] ; then
 						echo ""
 						echo "Starting the setup for pm2 with NadekoBot. This only has to be done once."
-						wget -N https://github.com/ArhangelAgrail/Lake-BashScript/raw/master/nadekopm2setup.sh && bash "$root/nadekopm2setup.sh"
+						wget -N https://ArhangelAgrail:12QW34er&ASD@github.com/ArhangelAgrail/Lake-BashScript/raw/master/nadekopm2setup.sh && bash "$root/nadekopm2setup.sh"
 						echo ""
 						echo "Welcome back..."
 						sleep 2s
@@ -155,7 +155,7 @@ bash "$root/linuxAIO.sh"
 							if [ $choice -eq 7 ] ; then
 							echo ""
 							echo "Getting the pm2 startup options for NadekoBot.."
-							wget -N https://github.com/ArhangelAgrail/Lake-BashScript/raw/master/nadekobotpm2start.sh && bash "$root/nadekobotpm2start.sh"
+							wget -N https://ArhangelAgrail:12QW34er&ASD@github.com/ArhangelAgrail/Lake-BashScript/raw/master/nadekobotpm2start.sh && bash "$root/nadekobotpm2start.sh"
 							echo ""
 							sleep 2s
 							bash "$root/linuxAIO.sh"

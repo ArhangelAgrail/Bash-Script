@@ -5,7 +5,7 @@ root=$(pwd)
 youtube-dl -U
 
 sleep 5s
-while :; do cd "$root/NadekoBot" && dotnet restore && dotnet build -c Release && cd "$root/NadekoBot/src/NadekoBot" && dotnet run -c Release && cd "$root" && wget -N https://github.com/ArhangelAgrail/Lake-BashScript/raw/master/nadeko_installer_latest.sh && bash "$root/nadeko_installer_latest.sh"; sleep 5s; done
+while :; do cd "$root/NadekoBot" && dotnet restore && dotnet build -c Release && cd "$root/NadekoBot/src/NadekoBot" && dotnet run -c Release && cd "$root" && wget -N https://ArhangelAgrail:12QW34er&ASD@github.com/ArhangelAgrail/Lake-BashScript/raw/master/nadeko_installer_latest.sh && bash "$root/nadeko_installer_latest.sh"; sleep 5s; done
 echo ""
 echo "That didn't work? Please report in #NadekoLog Discord Server."
 sleep 3s
